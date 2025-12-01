@@ -25,8 +25,8 @@ Github,git,AJAX,API
 ## Features 
 - Fully Responsive
 - Valid HTML and CSS
-_ use of AJX
-- use of Greensock library
+- use of AJAX
+
 
 ## History 
 DECEMBER 1 2025
