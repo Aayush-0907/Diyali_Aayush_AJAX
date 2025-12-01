@@ -83,6 +83,15 @@
     }
   }
 
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   @media screen and (min-width: 768px) {
       .Hotspot {
         display: block;
