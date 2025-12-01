@@ -1,6 +1,6 @@
 
 # AJAX AND API
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/686e5173-2e55-4cb9-869a-4c68cbe99e71" />
+
 
 ## About 
 This website is a example of how to pull content from api by using ajax in  the 3d model earbud (created in cinema 4d) using the model viewer.
