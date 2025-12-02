@@ -14,10 +14,10 @@
   <body>
     <div class="grid-con">
       <div class="col-span-full">
-        <!-- Static image for mobile devices -->
+      
         <img id="static-image" class="static-image" src="images/poster.webp" alt="Novo EarBuds">
         
-        <!-- 3D Model for tablet and above -->
+        
         <model-viewer id="model" class="model-viewer" src="model/earbuds.gltf" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
           <button class="Hotspot" slot="hotspot-1" data-position="22.114881038306805m 76.41863141465969m 92.72411936367459m" data-normal="0m 3.422854333301474e-8m 0.9999999999999996m" data-visibility-attribute="visible">
@@ -53,8 +53,8 @@
         </svg>
         <template id="material-template">
           <li>
-            <h3 class="material-title"></h3>
-            <p class="material-text"></p>
+            <h3 class="material-heading"></h3>
+            <p class="material-description"></p>
           </li>
         </template>
       </div>

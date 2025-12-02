@@ -76,6 +76,11 @@
 
   .HotspotAnnotation img {
     max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
   }
 
   model-viewer::part(default-progress-bar) {
