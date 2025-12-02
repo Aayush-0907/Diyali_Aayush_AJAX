@@ -16,6 +16,14 @@
       infoBoxes.forEach((infoBox, index) => {
       let selected = document.querySelector(`#hotspot-${index + 1}`);
 
+  
+      if (infoBox.thumbnail) {
+        const imageElement = document.createElement('img');
+        imageElement.src = `images/${infoBox.thumbnail}`;
+        imageElement.alt = infoBox.heading;
+        selected.appendChild(imageElement);
+      }
+
       const titleElement = document.createElement('h2');
       titleElement.textContent = infoBox.heading;
 
@@ -27,54 +35,47 @@
     });
     })
     .catch(error => {
-      console.log(error)
+      console.log(error);
       const errorMessage = document.createElement("p");
       errorMessage.textContent = "Oops, something went wrong.";
-      peopleCon.appendChild(errorMessage);
+      document.body.appendChild(errorMessage);
     });
-
-    
-  };
+  }
   loadInfoBoxes();
-
 
   function loadMaterialInfo() {
 
-    // add a loder in html, write code to show it here
     loader.classList.toggle("hidden");
 
-        
     fetch("https://swiftpixel.com/earbud/api/materials")
     .then(response => response.json())
     .then(materials => {
       console.log(materials);
-      materials.forEach((material, index) => {
+      materials.forEach((material) => {
       
       const clone = materialTemplate.content.cloneNode(true);
 
-      const materialHeading = clone.querySelector(".material-title");
+      const materialHeading = clone.querySelector(".material-heading");
       materialHeading.textContent = material.heading;
 
-      const materialDescription = clone.querySelector(".material-text");
+      const materialDescription = clone.querySelector(".material-description");
       materialDescription.textContent = material.description;
 
       loader.classList.toggle("hidden");
 
 
-      // Append the populated template to the list
       materialList.appendChild(clone);
     });
     })
     .catch(error => {
-      console.log(error)
+      console.log(error);
       const errorMessage = document.createElement("p");
       errorMessage.textContent = "Oops, something went wrong.";
-      peopleCon.appendChild(errorMessage);
+      document.body.appendChild(errorMessage);
     });
-  };
+  }
 
   loadMaterialInfo();
-
 
   function showInfo() {
     let selected = document.querySelector(`#${this.slot}`);
@@ -87,11 +88,9 @@
   }
 
   //Event listeners
-
   hotspots.forEach(function (hotspot) {
     hotspot.addEventListener("mouseenter", showInfo);
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
 })();
-
